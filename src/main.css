@@ -1,0 +1,149 @@
+/* FONTS
+****************************************************************************************************/
+@font-face {
+	font-family: 'Buenos Aires';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(./assets/fonts/BuenosAires-Regular.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Buenos Aires';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(./assets/fonts/BuenosAires-Bold.woff2) format('woff2');
+}
+@font-face {
+	font-family: 'Buenos Aires';
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url(./assets/fonts/BuenosAires-Black.woff2) format('woff2');
+}
+
+/* TAILWIND
+****************************************************************************************************/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+	@media (max-width: 400px) {
+		html {
+			font-size: 4vw;
+		}
+	}
+	@media (min-width: 1281px) {
+		html {
+			font-size: 1.25vw;
+		}
+	}
+	@media (min-width: 1920px) {
+		html {
+			font-size: 24px;
+		}
+	}
+	html {
+		@apply scroll-smooth  bg-neutral-100 text-[#091439] antialiased;
+	}
+}
+@layer components {
+}
+@layer utilities {
+	.bg-img-01 {
+		background:
+			url(./assets/images/bg1.svg) no-repeat right -10rem top -10rem / 72rem,
+			url(./assets/images/bg2.svg) no-repeat left 4rem bottom 2rem / 66rem;
+	}
+	.bg-img-02 {
+		background: url(./assets/images/bg3.svg) no-repeat left 8rem bottom -30rem / 72rem;
+	}
+	.bg-img-03 {
+		background: url(./assets/images/bg3.svg) no-repeat left 8rem top -40rem / 72rem;
+	}
+}
+
+/* REVEAL EFFECT
+****************************************************************************************************/
+.reveal-group:not(.reveal-active) .reveal-zoom-in,
+.reveal-group:not(.reveal-active) .reveal-fade-up,
+.reveal-group:not(.reveal-active) .reveal-fade-down,
+.reveal-group:not(.reveal-active) .reveal-fade-left,
+.reveal-group:not(.reveal-active) .reveal-fade-right {
+	opacity: 0;
+}
+.reveal-group:not(.reveal-active) .reveal-zoom-in {
+	transform: scale(0.5);
+}
+.reveal-group:not(.reveal-active) .reveal-fade-up {
+	transform: translateY(5rem);
+}
+.reveal-group:not(.reveal-active) .reveal-fade-down {
+	transform: translateY(-5rem);
+}
+.reveal-group:not(.reveal-active) .reveal-fade-left {
+	transform: translateX(5rem);
+}
+.reveal-group:not(.reveal-active) .reveal-fade-right {
+	transform: translateX(-5rem);
+}
+.reveal-group.reveal-active .reveal-zoom-in,
+.reveal-group.reveal-active .reveal-fade-up,
+.reveal-group.reveal-active .reveal-fade-down,
+.reveal-group.reveal-active .reveal-fade-left,
+.reveal-group.reveal-active .reveal-fade-right {
+	will-change: opacity, transform;
+	transition-duration: 1s;
+	transition-property: opacity, transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-group.reveal-active .reveal-delay-100 {
+	transition-delay: 100ms;
+}
+.reveal-group.reveal-active .reveal-delay-200 {
+	transition-delay: 200ms;
+}
+.reveal-group.reveal-active .reveal-delay-300 {
+	transition-delay: 300ms;
+}
+.reveal-group.reveal-active .reveal-delay-400 {
+	transition-delay: 400ms;
+}
+.reveal-group.reveal-active .reveal-delay-500 {
+	transition-delay: 500ms;
+}
+.reveal-group.reveal-active .reveal-delay-600 {
+	transition-delay: 600ms;
+}
+.reveal-group.reveal-active .reveal-delay-700 {
+	transition-delay: 700ms;
+}
+.reveal-group.reveal-active .reveal-delay-800 {
+	transition-delay: 800ms;
+}
+.reveal-group.reveal-active .reveal-delay-900 {
+	transition-delay: 900ms;
+}
+
+/* ZOOM EFFECTS
+****************************************************************************************************/
+@keyframes on-view-zoom-in {
+	0% {
+		transform: scale(0.5);
+		border-radius: 1.5rem;
+	}
+	99% {
+		border-radius: 1.5rem;
+	}
+	100% {
+		transform: scale(1);
+		border-radius: 0;
+	}
+}
+.on-view-zoom-in {
+	transform-origin: top center;
+	animation-name: on-view-zoom-in;
+	animation-timing-function: linear;
+	animation-timeline: view();
+	animation-range: entry;
+}

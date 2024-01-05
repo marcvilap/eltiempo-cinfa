@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets'
+interface Props {
+	title?: string
+	image: ImageMetadata
+	class: string
+}
+
+const { title, image, class: className } = Astro.props
+---
+
+<div class={className}>
+	<div class="rounded-3xl border border-current bg-white p-8 md:py-16 lg:px-20 xl:min-h-[38rem]">
+		{title && <h2 class="mx-auto mb-8 max-w-3xl text-center text-3xl font-black uppercase md:text-5xl">{title}</h2>}
+		<div class="grid items-center gap-8 md:grid-cols-5 lg:gap-20">
+			<div class="md:col-span-2">
+				<Image class="aspect-square rounded-full object-cover" src={image} width={529} alt="" />
+			</div>
+			<div class="md:col-span-3">
+				<div class="grid gap-4 text-pretty"><slot /></div>
+			</div>
+		</div>
+	</div>
+</div>

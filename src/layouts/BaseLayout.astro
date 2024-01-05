@@ -1,0 +1,37 @@
+---
+import '../main.css'
+import Header from '$components/Header.astro'
+import Footer from '$components/Footer.astro'
+
+const metaTitle = 'ElTiempo Content'
+const metaDescription = ''
+const metaUrl = 'https://www.eltiempo.es/bc/directorio/'
+---
+
+<!doctype html>
+<html lang="es-ES">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+		<meta name="robots" content="noindex,nofollow" />
+		<title>{metaTitle}</title>
+		<meta property="description" content={metaDescription} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={metaUrl} />
+		<meta property="og:image" content={`${metaUrl}thumbnail.jpg`} />
+		<meta property="og:title" content={metaTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:image" content={`${metaUrl}thumbnail.jpg`} />
+		<meta property="twitter:title" content={metaTitle} />
+		<meta property="twitter:description" content={metaDescription} />
+		<link rel="icon" href="/favicon.png" />
+	</head>
+
+	<body>
+		<Header />
+		<main class="overflow-clip"><slot /></main>
+		<Footer />
+		<script src="../main.ts"></script>
+	</body>
+</html>

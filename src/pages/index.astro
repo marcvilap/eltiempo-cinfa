@@ -1,0 +1,123 @@
+---
+import { Image } from 'astro:assets'
+import BaseLayout from '$layouts/BaseLayout.astro'
+import InfoBox from '$components/InfoBox.astro'
+import imgLogo from '$assets/images/logo.webp'
+import imgIcon1 from '$assets/images/icon1.webp'
+import imgIcon2 from '$assets/images/icon2.webp'
+import imgIcon3 from '$assets/images/icon3.webp'
+import imgIcon4 from '$assets/images/icon4.webp'
+import imgGrid1 from '$assets/images/grid1.webp'
+import imgGrid2 from '$assets/images/grid2.webp'
+import imgGrid3 from '$assets/images/grid3.webp'
+import imgBanner from '$assets/images/banner.webp'
+import imgBox1 from '$assets/images/box1.webp'
+import imgBox2 from '$assets/images/box2.webp'
+import imgBox3 from '$assets/images/box3.webp'
+import imgBox4 from '$assets/images/box4.webp'
+import imgBox5 from '$assets/images/box5.webp'
+import video from '$assets/videos/video.mp4'
+---
+
+<BaseLayout>
+	<div class="bg-img-01 py-8 md:pb-24">
+		<div class="container relative">
+			<a class="ml-auto flex w-56 flex-col leading-none text-[#4697B6]" href="/">
+				<span>Invierno sin pausas</span>
+				<small class="mb-2">Un proyecto de</small>
+				<Image class="w-40 self-end" src={imgLogo} width={320} alt="" />
+			</a>
+			<div class="reveal-group">
+				<h1 class="reveal-fade-up mt-8 flex max-w-[60rem] flex-wrap items-center gap-x-4 text-4xl font-black uppercase md:text-6xl">
+					<span>Así</span>
+					<span>es</span>
+					<span>cómo</span>
+					<span>afecta</span>
+					<span>el</span>
+					<span>invierno</span>
+					<Image class="size-8 rounded-full md:size-16" src={imgIcon1} width={96} alt="" />
+					<span>a</span>
+					<span>tu</span>
+					<span>cuerpo</span>
+					<Image class="h-8 w-16 rounded-full md:h-16 md:w-32" src={imgIcon2} width={192} alt="" />
+					<span>(y</span>
+					<span>cómo</span>
+					<span>puedes</span>
+					<Image class="size-8 rounded-full md:size-16" src={imgIcon3} width={96} alt="" />
+					<span>disfrutar</span>
+					<span>al</span>
+					<span>máximo</span>
+					<Image class="size-8 scale-110 rounded-full md:size-16" src={imgIcon4} width={106} alt="" />
+					<span>de</span>
+					<span>la</span>
+					<span>estación)</span>
+				</h1>
+				<p class="reveal-fade-up reveal-delay-100 my-8 max-w-2xl text-xl md:my-16">¿Nos ponemos enfermos por el frío? ¿Bajan nuestras defensas en invierno? Resolvemos en un artículo las grandes cuestiones que rodean, desde siempre, la relación entre el frío y la tos seca. ¡Echa un vistazo, seguro que alguna te sorprende!</p>
+				<a class="reveal-fade-up reveal-delay-200 inline-flex items-center gap-2 text-[#4697B6]" href="#down">
+					<span>Seguir leyendo</span>
+					<svg class="w-3 animate-bounce" viewBox="0 0 608 960">
+						<path fill="#0B4655" fill-opacity=".33" d="M41 3C-2 17-11 72 14 105c17 22 40 39 61 58 48 47 98 91 146 138 29 29 58 60 104 48 32-8 56-43 79-64l130-122c20-19 43-36 60-58 28-36 13-96-35-103-40-7-61 15-88 40-34 30-68 61-100 92-15 15-47 59-71 54-21-4-40-32-54-46-35-34-72-67-109-100-28-26-54-52-96-39"></path>
+						<path fill="#0B4655" fill-opacity=".66" d="M41 308c-43 13-52 68-27 101 17 23 40 40 61 59 47 44 95 88 141 133 32 30 61 64 109 52 32-8 56-43 79-64 43-38 84-78 125-117 22-21 47-39 65-63 28-36 13-96-35-103-40-6-61 15-88 39-34 30-68 62-100 93-14 14-48 59-71 54-20-5-40-31-54-45-35-35-72-68-109-101-28-26-54-51-96-38"></path>
+						<path fill="#0B4655" d="M41 612c-43 13-52 68-27 101 17 23 40 40 61 59 47 44 95 88 141 133 32 31 61 65 109 53 32-9 56-43 79-65 43-38 84-77 125-117 22-21 47-38 65-63 28-36 13-95-35-103-40-6-61 16-88 40-34 30-68 61-100 93-14 14-48 58-71 53-20-4-40-31-54-45-35-35-72-68-109-101-28-25-54-51-96-38"></path>
+					</svg>
+				</a>
+			</div>
+			<div id="down" class="relative top-16"></div>
+			<div class="reveal-group my-8 grid grid-cols-3 gap-4 md:my-24 md:gap-8">
+				<div class="reveal-fade-up reveal-delay-400 pt-24"><Image class="rounded-3xl" src={imgGrid1} width={528} alt="" /></div>
+				<div class="reveal-fade-up"><Image class="rounded-3xl" src={imgGrid2} width={528} alt="" /></div>
+				<div class="reveal-fade-up reveal-delay-200 pt-10"><Image class="rounded-3xl" src={imgGrid3} width={528} alt="" /></div>
+			</div>
+			<div class="reveal-group mx-auto max-w-4xl text-xl">
+				<p class="reveal-fade-up">¿Cuántas veces habremos escuchado cosas como que el frío entra por los pies? Aprovechamos esta época del año, en la que el verdadero frío empieza a llamar a la puerta, para resolver algunos de los mitos y realidades que resuenan desde siempre en nuestro entorno y de los que nunca hemos tenido la verdadera certeza de si son verdades o dichos populares, y cómo <a class="font-bold underline" target="_blank" href="#">Cinfatós Noche</a> nos ayuda a combatir la tos seca durante la noche.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="relative aspect-video xl:min-h-screen">
+		<Image class="on-view-zoom-in absolute size-full object-cover" src={imgBanner} width={1920} alt="" />
+	</div>
+
+	<div class="bg-img-02 py-8 md:py-24">
+		<div class="container">
+			<div class="grid gap-8 md:gap-24">
+				<InfoBox class="md:sticky md:top-8" title="Frío para despedir y comenzar el año" image={imgBox1}>
+					<p>Las previsiones meteorológicas están advirtiendo que las temperaturas extremas van a continuar generando una situación anticiclónica invernal. Esto, dicho en otras palabras, ¡significa <strong>mucho frío! Las bajas temperaturas impactan en nuestro día</strong> a día, desde la forma en que vestimos, hasta los planes que hacemos o nuestros medios de transporte.</p>
+					<p>Entre otras alteraciones de nuestra rutina, el <strong>invierno reduce las horas de luz</strong>, por lo que tendemos a adaptar nuestros horarios a más horas de noche y, con suerte, de descanso.</p>
+				</InfoBox>
+				<InfoBox class="md:sticky md:top-12" title="¿Cómo nos afecta el invierno?" image={imgBox2}>
+					<p>Vamos a partir de la gran verdad que anula muchos de los dichos populares mencionados anteriormente: <strong>el frío, en sí mismo, no nos pone enfermos</strong>. ¡Bum! ¿Rompe esto tus esquemas? Te estarás preguntando: “pero, entonces, ¿por qué nos ponemos más veces enfermos en invierno que en el resto del año?”.</p>
+					<p>La respuesta a esta pregunta (y clave para entender todo aquello en lo que creíamos hasta ahora) <strong>es que el frío sí puede contribuir a las condiciones que favorecen la aparición de la tos</strong>, más todavía durante las noches. ¿En qué sentido? Te lo explicamos:</p>
+				</InfoBox>
+				<InfoBox class="md:sticky md:top-16" image={imgBox3}>
+					<p>En invierno, el frío debilita nuestra mucosa nasal, primera barrera contra los virus respiratorios. Hay una menor exposición al sol (disminuyendo así nuestra producción de vitamina D, que desempeña un papel importante en el sistema inmunológico), apetece menos hacer deporte (el cual también ayuda a nuestro sistema inmune).</p>
+					<p>Con el frío, además, tendemos a ventilar menos la casa y hacemos más actividades en espacios cerrados lo que facilita la propagación de unos virus que, por si fuera poco, resisten mejor el frío que el calor de la primavera o el verano. También el ventilar menos y la calefacción encendida, que reseca el ambiente, hace que la humedad ambiental en casa sea muy baja, lo que <strong>aumenta las probabilidades de tener tos seca</strong>, sobre todo durante la noche a la hora de dormir.</p>
+					<p>Por tanto, no andaban tan desencaminados aquellos consejos preventivos para <strong>combatir el frío en invierno</strong>, como abrigarse, mantenerse activo, ventilar y cuidarse la piel, ya que sí pueden ayudar a <strong>mitigar los efectos negativos del invierno en nuestro cuerpo</strong>.</p>
+				</InfoBox>
+				<InfoBox class="md:sticky md:top-20" title="¿Qué ocurre cuando el frío nos gana la batalla?" image={imgBox4}>
+					<p>A veces, por muchas precauciones que tomemos, los virus nos alcanzan, generando los síntomas más comunes, pesados y molestos que son capaces de acompañar a todos los miembros de la familia en algún momento (o momentos) del año. Tos, malestar general… Y un síntoma más silencioso, pero igual de molesto: <strong>las alteraciones del sueño</strong>.</p>
+					<p>¿Qué tal esas <strong>noches sin dormir por culpa de una tos nocturna</strong> que no cesa? (Recordemos, además, que las noches en invierno, ¡son más largas!). Para muchos, puede ser su peor pesadilla. Y, con razón, porque al amanecer no solo tenemos la molestia, sino también el embotamiento por no haber pegado ojo. ¡Y esto aplica tanto para el que lo sufre, como para los que lo escuchan!</p>
+				</InfoBox>
+				<InfoBox class="md:sticky md:top-24" title="Medidas eficaces para tratar los síntomas" image={imgBox5}>
+					<p>Aquí es cuando debemos pasar de las medidas preventivas a la acción: beber mucho líquido, acostarnos un poco más incorporados que de costumbre, por ejemplo con dos almohadas, y hacer uso de aquellos recursos que los expertos ponen a nuestro alcance para mejorar nuestra calidad de vida.</p>
+					<p>Un ejemplo de ello es <strong>Cinfatós Noche</strong>, el producto que comercializa Laboratorios Cinfa para combatir la tos nocturna. A partir de los <strong>15 minutos de su toma</strong>, este jarabe actúa con una doble acción ganadora: <strong>aliviar la tos y ayudar a conciliar el sueño</strong>. La elección definitiva para que las noches no sean tan largas, pero sí nos aporten descanso, ¡que es un ingrediente fundamental para superar cualquier virus!</p>
+				</InfoBox>
+			</div>
+			<div class="reveal-group mx-auto mt-8 max-w-3xl text-center text-2xl md:mb-8 md:mt-32 md:text-3xl">
+				<p class="reveal-fade-up">Después de leer este artículo, cuentas con todo lo necesario para sobrellevar el invierno de la mejor manera posible. ¡Que la fuerza te acompañe!</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="relative bg-black">
+		<video id="target-video" class="w-full" src={video}></video>
+		<button id="play-video" class="absolute inset-0 flex items-center justify-center">
+			<span class="reveal-group relative grid size-20">
+				<span class="reveal-zoom-in flex items-center justify-center rounded-full bg-white">
+					<span class="absolute inset-0 animate-ping rounded-full bg-white"></span>
+					<span class="border-y-[.75rem] border-l-[1rem] border-y-transparent border-l-black"></span>
+				</span>
+			</span>
+		</button>
+	</div>
+</BaseLayout>

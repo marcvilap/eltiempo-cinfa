@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets'
+import imgLogo from '$assets/images/logo.webp'
+---
+
+<footer class="bg-img-03 relative text-center">
+	<div class="container relative flex flex-col items-center gap-8 py-16">
+		<div>
+			<p class="mb-6 text-sm">ElTiempo Content para</p>
+			<Image class="mx-auto block w-40" src={imgLogo} width={320} alt="" />
+		</div>
+	</div>
+</footer>

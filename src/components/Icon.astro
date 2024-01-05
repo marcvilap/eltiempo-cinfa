@@ -1,0 +1,21 @@
+---
+interface Props {
+	name: string
+	class?: string
+}
+
+const getIconName = (path: string) => path.split('/').pop()?.split('.')[0] ?? ''
+
+const { name, class: className } = Astro.props
+const getIcons = import.meta.glob('../assets/icons/**/*.svg', { as: 'raw', eager: true })
+const allIcons = Object.fromEntries(Object.entries(getIcons).map(([path, value]) => [getIconName(path), value]))
+const findIcon = allIcons[name]
+
+if (!findIcon) {
+	throw new Error(`Icon "${name}" not found`)
+}
+
+const icon = findIcon.replace(' xmlns="http://www.w3.org/2000/svg"', className ? ` class="${className}"` : '')
+---
+
+<Fragment set:html={icon} />
